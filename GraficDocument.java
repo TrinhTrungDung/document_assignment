@@ -1,15 +1,16 @@
 package document;
 
-import java.util.List;
+import java.net.URL;
 
 public class GraficDocument extends CoreDocument {
 
     private Integer id;
-    private String name;
+    private String url;
     private static final Integer size = 1200;
 
     GraficDocument(String url) {
         super(url);
+        this.url = url;
     }
 
     @Override
@@ -22,14 +23,12 @@ public class GraficDocument extends CoreDocument {
         return super.getId();
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public String getUrl() {
+        return this.url;
     }
 
     @Override
